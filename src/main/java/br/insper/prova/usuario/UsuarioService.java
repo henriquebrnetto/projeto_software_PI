@@ -1,4 +1,4 @@
-package br.insper.iam.usuario;
+package br.insper.prova.usuario;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

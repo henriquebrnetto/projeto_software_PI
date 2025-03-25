@@ -1,8 +1,8 @@
-package br.insper.iam.usuario.controller;
+package br.insper.prova.controller;
 
-import br.insper.iam.usuario.Usuario;
-import br.insper.iam.usuario.UsuarioController;
-import br.insper.iam.usuario.UsuarioService;
+import br.insper.prova.usuario.Usuario;
+import br.insper.prova.usuario.UsuarioController;
+import br.insper.prova.usuario.UsuarioService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

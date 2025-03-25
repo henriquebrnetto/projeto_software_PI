@@ -1,9 +1,9 @@
-package br.insper.iam.usuario.service;
+package br.insper.prova.service;
 
-import br.insper.iam.usuario.CountUsuarioDTO;
-import br.insper.iam.usuario.Usuario;
-import br.insper.iam.usuario.UsuarioRepository;
-import br.insper.iam.usuario.UsuarioService;
+import br.insper.prova.usuario.CountUsuarioDTO;
+import br.insper.prova.usuario.Usuario;
+import br.insper.prova.usuario.UsuarioRepository;
+import br.insper.prova.usuario.UsuarioService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
