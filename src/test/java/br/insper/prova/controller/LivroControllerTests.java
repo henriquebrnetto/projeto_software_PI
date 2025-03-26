@@ -137,7 +137,7 @@ public class LivroControllerTests {
     void test_DeleteLivroUsuarioNaoAutorizado() throws Exception {
         Usuario usuario = new Usuario();
         usuario.setEmail("admin@teste.com");
-        usuario.setPapel("ADMIN");
+        usuario.setPapel("USER");
 
         when(usuarioService.findUsuarioByEmail("admin@teste.com")).thenReturn(usuario);
 
