@@ -4,18 +4,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Usuario {
-
     private String nome;
     private String email;
-
-    public Usuario(String nome, String email) {
-        this.nome = nome;
-        this.email = email;
-    }
-
-    public Usuario() {
-
-    }
+    private String papel;
 
     public String getNome() {
         return nome;
@@ -33,8 +24,11 @@ public class Usuario {
         this.email = email;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return this.email.equals(((Usuario) obj).getEmail());
+    public String getPapel() {
+        return papel;
+    }
+
+    public void setPapel(String papel) {
+        this.papel = papel;
     }
 }
