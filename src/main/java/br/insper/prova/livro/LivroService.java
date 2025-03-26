@@ -44,9 +44,4 @@ public class LivroService {
         Livro livro = findLivroByTitulo(titulo);
         livroRepository.delete(livro);
     }
-
-    public CountLivroDTO countLivros() {
-        Long count = livroRepository.count();
-        return new CountLivroDTO(count);
-    }
 }
