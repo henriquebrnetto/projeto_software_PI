@@ -1,5 +1,7 @@
-package br.insper.prova.livro;
+package br.insper.prova.service;
 
+import br.insper.prova.models.Livro;
+import br.insper.prova.repository.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

@@ -1,5 +1,6 @@
-package br.insper.prova.usuario;
+package br.insper.prova.service;
 
+import br.insper.prova.models.Usuario;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

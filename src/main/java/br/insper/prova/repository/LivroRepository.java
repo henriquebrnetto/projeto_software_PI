@@ -1,5 +1,6 @@
-package br.insper.prova.livro;
+package br.insper.prova.repository;
 
+import br.insper.prova.models.Livro;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

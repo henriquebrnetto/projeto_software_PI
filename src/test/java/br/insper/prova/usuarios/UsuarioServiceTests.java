@@ -1,7 +1,7 @@
 package br.insper.prova.usuarios;
 
-import br.insper.prova.usuario.Usuario;
-import br.insper.prova.usuario.UsuarioService;
+import br.insper.prova.models.Usuario;
+import br.insper.prova.service.UsuarioService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

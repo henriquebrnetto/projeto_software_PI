@@ -1,4 +1,4 @@
-package br.insper.prova.usuario;
+package br.insper.prova.models;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 

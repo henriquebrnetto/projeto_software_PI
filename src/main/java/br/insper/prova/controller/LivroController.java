@@ -1,11 +1,12 @@
-package br.insper.prova.livro;
+package br.insper.prova.controller;
 
-import br.insper.prova.usuario.Usuario;
-import br.insper.prova.usuario.UsuarioService;
+import br.insper.prova.service.LivroService;
+import br.insper.prova.models.Livro;
+import br.insper.prova.models.Usuario;
+import br.insper.prova.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;

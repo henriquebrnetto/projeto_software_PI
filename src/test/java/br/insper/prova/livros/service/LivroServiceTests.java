@@ -1,8 +1,8 @@
 package br.insper.prova.livros.service;
 
-import br.insper.prova.livro.Livro;
-import br.insper.prova.livro.LivroRepository;
-import br.insper.prova.livro.LivroService;
+import br.insper.prova.models.Livro;
+import br.insper.prova.repository.LivroRepository;
+import br.insper.prova.service.LivroService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
