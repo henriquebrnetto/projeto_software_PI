@@ -1,7 +1,6 @@
-package br.insper.prova.livros.controller;
+package br.insper.prova.controller;
 
 import br.insper.prova.models.Livro;
-import br.insper.prova.controller.LivroController;
 import br.insper.prova.service.LivroService;
 import br.insper.prova.models.Usuario;
 import br.insper.prova.service.UsuarioService;
@@ -46,9 +45,9 @@ public class LivroControllerTests {
     @Test
     void test_GetLivros() throws Exception {
         List<Livro> livros = Arrays.asList(
-                new Livro("Título1", "Autor1", "Gênero1",
+                new Livro("0", "Título1", "Autor1", "Gênero1",
                         2001, "Nome1", "email1@example.com"),
-                new Livro("Título2", "Autor2", "Gênero2",
+                new Livro("1", "Título2", "Autor2", "Gênero2",
                         2002, "Nome2", "email2@example.com")
         );
 
@@ -61,7 +60,7 @@ public class LivroControllerTests {
 
     @Test
     void test_PostLivroSucesso() throws Exception {
-        Livro livro = new Livro("Título", "Autor", "Gênero",
+        Livro livro = new Livro("0", "Título", "Autor", "Gênero",
                 2021, "Nome", "teste@teste.com");
         Usuario usuario = new Usuario();
         usuario.setEmail("teste@teste.com");
@@ -80,7 +79,7 @@ public class LivroControllerTests {
 
     @Test
     void test_PostLivroUsuarioNaoAutorizado() throws Exception {
-        Livro livro = new Livro("Título", "Autor", "Gênero",
+        Livro livro = new Livro("0", "Título", "Autor", "Gênero",
                 2021, "Nome", "teste@teste.com");
         Usuario usuario = new Usuario();
         usuario.setEmail("teste@teste.com");
@@ -97,7 +96,7 @@ public class LivroControllerTests {
 
     @Test
     void test_PostLivroUsuarioNaoEncontrado() throws Exception {
-        Livro livro = new Livro("Título", "Autor", "Gênero",
+        Livro livro = new Livro("0", "Título", "Autor", "Gênero",
                 2021, "Nome", "teste@teste.com");
 
         when(usuarioService.findUsuarioByEmail("teste@teste.com")).thenReturn(null);
