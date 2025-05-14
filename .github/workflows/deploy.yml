@@ -49,6 +49,6 @@ jobs:
         script: |
           docker stop prova
           docker rm --force prova
-          docker run -d -p 8080:8080
-          -e MONGODB_URI=${{ secrets.MONGODB_URI }}
+          docker run -d -p 8080:8080 \
+          -e MONGODB_URI=${{ secrets.MONGODB_URI }} \
           --name prova --network=rede henriquebrnetto/prova-ci:${{ github.sha }}
