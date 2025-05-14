@@ -2,6 +2,7 @@ package br.insper.prova.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -23,9 +24,10 @@ public class WebSecurityConfig implements WebMvcConfigurer {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/public/**").permitAll()
-                        .anyRequest()
-                        .authenticated()
+                        .requestMatchers(HttpMethod.GET, "/api/artigos").authenticated()
+                        .requestMatchers(HttpMethod.POST, "/api/artigos").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/artigos/**").hasRole("ADMIN")
+                        .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(Customizer.withDefaults())
