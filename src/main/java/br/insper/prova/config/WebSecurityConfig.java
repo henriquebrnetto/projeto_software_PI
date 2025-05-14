@@ -25,8 +25,8 @@ public class WebSecurityConfig implements WebMvcConfigurer {
         http
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.GET, "/api/artigos").authenticated()
-                        .requestMatchers(HttpMethod.POST, "/api/artigos").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.DELETE, "/api/artigos/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/artigos").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/api/artigos/**").authenticated()
                         .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
