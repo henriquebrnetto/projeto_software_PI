@@ -24,10 +24,9 @@ public class WebSecurityConfig implements WebMvcConfigurer {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers(HttpMethod.GET, "/api/artigos").authenticated()
-                        .requestMatchers(HttpMethod.POST, "/api/artigos").authenticated()
-                        .requestMatchers(HttpMethod.DELETE, "/api/artigos/**").authenticated()
-                        .anyRequest().authenticated()
+                        .requestMatchers("/public/**").permitAll()
+                        .anyRequest()
+                        .authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(Customizer.withDefaults())
